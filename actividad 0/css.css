@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(30, 90, 30);
+    color: aqua;
+}
+
+table {
+    border-style: dotted;
+    border-color: brown;
+}
+table td, table th {
+    
+}
+table thead {
+  }
+table thead th {
+}
+table tfoot {
+  font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: brown;
+}
+
+a:visited {
+    color:aliceblue;
+}
