@@ -1,0 +1,35 @@
+.tabla{
+    border: solid;
+    text-align: center;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla table{
+    width: 100%;
+}
+
+.tabla table tr{
+    width: 100%;
+}
+
+.tabla table input{
+    width: 100%;
+}
+
+.tabla table tr:nth-child(even){
+    background-color: #9c8e8e;
+}
+
+.tabla table tr:nth-child(odd){
+    background-color: #b94c4c;
+}
+
+.lupa{
+    width: 20px;
+}
+
+.lupa img{
+    width: 100%;
+    height: 100%;
+}
