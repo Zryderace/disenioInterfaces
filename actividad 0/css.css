@@ -30,9 +30,22 @@ a:visited {
 .tablaCiudades{
   color:blue;
   border-radius: 5%;
+  text-align: center;
+  width: 100%;
   
+}
+
+.tablaCiudades td{
+  color: red;
+  border: solid;
+  border-width: 1cap;
+  border-color: rgb(104, 89, 89);
 }
 
 .bodyCiudades{
   background-color: #fff;
+}
+
+.bodyCiudades:hover{
+  background-color: #999797;
 }
