@@ -1,0 +1,17 @@
+body{
+    background-color: #e5d6d6;
+    text-align: justify;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+img{
+    width: 100%;
+}
+

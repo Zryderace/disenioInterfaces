@@ -1,0 +1,15 @@
+body{
+    background-color: #e5d6d6;
+}
+
+.info{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: line-through;
+}
+
+.info:hover {
+    text-transform: lowercase;
+    color: rgb(88, 154, 154);
+
+}
