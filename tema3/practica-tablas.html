@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+            border: 1px double #000;
+            border-collapse: collapse;
+            /*background-image: url(/tema3/imagenes/fondo-textura-madera-realista_23-2149221129.avif);
+            */color: beige;
+        }
+        th, td{
+            width: 25%;
+            text-align: center;
+            vertical-align: top;
+            border: 1px solid #000;
+            border-style: dashed;
+            padding: 0.3em;
+            caption-side: bottom;
+        }
+        
+        tr:nth-child(odd){
+            background-color: #906868;
+        }
+        tr:nth-child(even){
+            background-color: #631e1e;
+        }
+        caption{
+            padding: 0.3em;
+            color: #000;
+        }
+        .tfoot{
+            text-align: left;
+            background-color: #dc4040;
+        }
+    </style>
+</head>
+<body>
+    <table id="table_example" summary="Listado de volcanes">
+        <caption>Listado de volcanes</caption>
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Localizacion</th>
+                <th scope="col">Año de explosion</th>
+                <th scope="col">Tipo de explosion</th>
+            </tr>
+        </thead>
+        <tfoot><tr><td colspan="4" class="tfoot">&copy; Recopilacion 2024</td></tr></tfoot>
+        <tbody>
+            <tr>
+                <th scope="row">Lassen</th>
+                <td>California</td>
+                <td>1914-7</td>
+                <td>Tipo 1</td>
+            </tr>
+            <tr>
+                <th scope="row">Hood</th>
+                <td>Oregon</td>
+                <td>1970s</td>
+                <td>Tipo 2</td>
+            </tr>
+            <tr>
+                <th scope="row">Helens</th>
+                <td>Washington</td>
+                <td>1980</td>
+                <td>Tipo 3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
