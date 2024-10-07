@@ -1,0 +1,23 @@
+body{
+    background-color: #669BBC;
+    color: #FDF0D5;
+    font-family: "Black Ops One", "Open Sans", system-ui;
+}
+
+table{
+    border: 1px solid black;
+    text-align: center;
+    width: 100%;
+  }
+
+th{
+    text-align: center;
+}
+
+.logo{
+    width: 50%;
+}
+
+.iconos{
+    width: 10%;
+}

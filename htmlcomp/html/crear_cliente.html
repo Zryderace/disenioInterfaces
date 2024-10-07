@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="Style/formulario.css">
+  </head>
+  <body>
+
+
+    <header>
+        <img src="assets/Logo_final.png" alt="">
+    </header>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Catalogo</a>
+      <a href="#">Información</a>
+      <a href="#">Contacto</a>
+    </nav>
+    <h2>Crear cliente</h2>
+    <form action="" method="get">
+      <label for="nombre" class="requerida">Nombre</label>
+      <br />
+      <input type="text" name="nombre" required />
+      <br />
+      <label for="apellido1" class="requerida">Apellido1</label>
+      <br />
+      <input type="text" name="Apellido1" required />
+      <br />
+      <label for="apellido2">Apellido2</label>
+      <br />
+      <input type="text" name="apellido2" />
+      <br />
+      <label for="telefono1" class="requerida">Telefono1</label>
+      <br />
+      <select name="prefijo" id="">
+        <option value="+34" selected>+34</option>
+        <option value="+1">+1</option>
+        <option value="+2">+2</option>
+        <option value="+3">+3</option>
+        <option value="+4">+4</option>
+      </select>
+      <input type="number" name="telefono1" required />
+      <br />
+      <label for="telefono2">Telefono2</label>
+      <br />
+      <select name="prefijo" id="">
+        <option value="+34" selected>+34</option>
+        <option value="+1">+1</option>
+        <option value="+2">+2</option>
+        <option value="+3">+3</option>
+        <option value="+4">+4</option>
+      </select>
+      <input type="number" name="telefono2" />
+      <br />
+      <label for="email" class="requerida">Email</label>
+      <br />
+      <input type="email" name="email" id="" required />
+      <br />
+      <label for="fecha">Fecha de nacimiento</label>
+      <br />
+      <input type="date" name="fecha" id="" />
+      <br />
+      <label for="comentario">Comentarios</label>
+      <br />
+      <textarea name="comentario" id=""></textarea>
+      <br />
+      <input type="checkbox" name="estado" id="" checked />
+      <label for="estado">Activo</label>
+      <button type="submit">Guardar</button>
+    </form>
+
+
+    <footer>
+        <p>30/09/2024</p>
+    </footer>
+  </body>
+</html>
