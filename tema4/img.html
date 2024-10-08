@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img srcset="zilla.PNG, zillasmall.PNG 2x, zillasmaller.PNG 3x"
+    src="zilla.PNG" alt="Imagen">
+    <br>
+    <picture>
+        <source media="(max-width: 799px)" srcset="zilla.PNG">
+        <source media="(max-width: 800px)" srcset="zillasmall.PNG">
+        <img src="zilla.PNG" alt="Imagen2">
+    </picture>
+</body>
+</html>

@@ -5,6 +5,7 @@ background: linear-gradient(180deg, rgba(120,0,0,1) 0%, rgba(102,155,188,1) 10%,
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+    font-family: "Black Ops One", "Open Sans", system-ui;
 }
 textarea:focus-within, input:focus-within{
     color: antiquewhite;

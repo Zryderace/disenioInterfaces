@@ -6,9 +6,10 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10%;
+    margin-bottom: 2vh;
 }
 
 body{
     text-align: center;
+    padding-top: 20vh;
 }
