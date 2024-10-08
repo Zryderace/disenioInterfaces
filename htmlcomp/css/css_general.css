@@ -1,0 +1,46 @@
+body{
+    background: linear-gradient(180deg, rgba(102,155,188,1) 0%, rgba(120,0,0,1) 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+textarea:focus-within, input:focus-within{
+    color: antiquewhite;
+    background-color: #5f5252;
+}
+
+a{
+    color: rgb(240, 65, 7);
+}
+
+form{
+    input, select, textarea{
+        transition: all 0.3s ease;
+        &:focus {
+            outline: none;
+            border-color: #2d8cf0;
+        }
+    }
+}
+.form{
+    padding-bottom: 1cm;
+}
+
+html{
+    position: relative;
+    min-height: 100vh;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    left: 0px;
+    position: absolute;
+    background-color: rgba(102,155,188,1);
+    height: 2.5rem;
+}
+
+a:hover{
+    color: antiquewhite;
+}
