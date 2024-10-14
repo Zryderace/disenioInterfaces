@@ -29,3 +29,28 @@ button img{
 td img{
     width: 30%;
 }
+
+@media screen and (max-width: 1750px) and (min-width: 1250px){
+    .activo{
+        display: none;
+    }
+}
+@media screen and (max-width: 1249px) and (min-width: 750px){
+    .activo{
+        display: none;
+    }
+    .telefono{
+        display: none;
+    }
+}
+@media screen and (max-width: 749px){
+    .activo{
+        display: none;
+    }
+    .telefono{
+        display: none;
+    }
+    .nombre{
+        display: none;
+    }
+}
