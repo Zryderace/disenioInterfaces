@@ -1,0 +1,43 @@
+.cabecera{
+    background-color: aqua;
+    width: 100%;
+    text-align: center;
+}
+
+.triple{
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+    background-color: lightgreen;
+    width: 25%;
+    height: fit-content;
+    padding-bottom: 10px;
+}
+
+.inside{
+    text-align: center;
+    margin-top: 10px;
+    background-color: gold;
+    border: 5px dotted blue;
+}
+
+.mid{
+    background-color: violet;
+    width: 50%;
+    height: fit-content;
+}
+
+.right{
+    background-color: purple;
+    width: 25%;
+    height: fit-content;
+}
+
+.foot{
+    background-color: green;
+    width: 100%;
+    text-align: center;
+}
+

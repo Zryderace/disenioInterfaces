@@ -1,0 +1,44 @@
+.capa1{
+    border: dashed;
+    position: relative;
+    height: 8em;
+    margin-bottom: 1em;
+    margin-top: 2em;
+
+    z-index: 0;
+}
+
+.capa2{
+    background-color: gold;
+    width: 200px;
+    height: 100px;
+    left: 60px;
+    position: absolute;
+    top: 3em;
+
+    z-index: 5;
+}
+
+.capa3{
+    background-color: lightgreen;
+    width: 200px;
+    height: 7em;
+    left: 20em;
+    opacity: 0.9;
+    position: absolute;
+    top: -25px;
+
+    z-index: 2;
+}
+
+.capa4{
+    background-color: lightblue;
+    width: 200px;
+    height: 7em;
+    left: 160px;
+    opacity: 0.6;
+    position: absolute;
+    top: 1em;
+
+    z-index: 3;
+}
