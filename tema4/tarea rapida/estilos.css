@@ -1,0 +1,28 @@
+body{
+    background-color: #767070;
+}
+
+.titulo{
+    width: 100%;
+    padding-left: auto;
+    padding-right: auto;
+    text-align: center;
+}
+
+.titulo:hover{
+    color: aqua;
+}
+
+.link{
+    width: 100%;
+    padding-left: auto;
+    padding-right: auto;
+    text-align: center;
+}
+
+.logo{
+    width: 100%;
+    padding-left: auto;
+    padding-right: auto;
+    text-align: center;
+}
