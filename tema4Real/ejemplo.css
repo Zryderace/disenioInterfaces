@@ -1,3 +1,40 @@
+@media screen and (max-width: 1920px) and (min-width: 1501px){
+    .right{
+        width: 25%;
+    }
+    .mid{
+        width: 50%;
+    }
+    .left{
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1200px){
+    .right{
+        display: none;
+    }
+    .mid{
+        width: 50%;
+    }
+    .left{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 1199px) and (min-width: 1px){
+    .left{
+        width: 100%;
+    }
+    .right{
+        display: none;
+    }
+    .mid{
+        display: none;
+    }
+}
+
+
+
 .cabecera{
     background-color: aqua;
     width: 100%;
@@ -11,7 +48,6 @@
 
 .left{
     background-color: lightgreen;
-    width: 25%;
     height: fit-content;
     padding-bottom: 10px;
 }
@@ -25,13 +61,11 @@
 
 .mid{
     background-color: violet;
-    width: 50%;
     height: fit-content;
 }
 
 .right{
     background-color: purple;
-    width: 25%;
     height: fit-content;
 }
 
@@ -40,4 +74,3 @@
     width: 100%;
     text-align: center;
 }
-
