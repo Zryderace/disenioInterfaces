@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,mBAAmB;EACf,YAAY,EAJT,OAAO;EAKV,KAAK,EAAE,OAAmC;;AAG9C,OAAO;EACH,OAAO,EAAE,GAAS;EAClB,MAAM,EAAE,GAAS;EACjB,YAAY,EAXT,OAAO",
+"sources": ["ejemplo.scss"],
+"names": [],
+"file": "csccACss.css"
+}

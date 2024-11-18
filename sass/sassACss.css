@@ -1,0 +1,47 @@
+.content-navigation {
+  border-color: #3bbfce;
+  color: #2b9eab; }
+
+.border, .granderLiner {
+  padding: 8px;
+  margin: 8px;
+  border-color: #3bbfce; }
+
+.grandLine {
+  border: 2px dotted #3bbfce;
+  color: #3bbfce;
+  font-size: 5em;
+  font-weight: bold; }
+
+.granderLiner {
+  font-weight: 3em;
+  left: auto;
+  right: auto; }
+
+div {
+  color: green; }
+  div div {
+    color: red; }
+    div div div {
+      color: #3bbfce; }
+
+.outer {
+  color: green;
+  border: 2px dotted #3bbfce;
+  color: #3bbfce;
+  font-size: 5em;
+  font-weight: bold;
+  width: 500px; }
+
+.example {
+  font-family: serif;
+  font-style: normal;
+  font-size: medium; }
+
+body {
+  background-color: #798688; }
+
+.divColumnas {
+  width: 250px; }
+
+/*# sourceMappingURL=sassACss.css.map */

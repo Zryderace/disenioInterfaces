@@ -1,0 +1,59 @@
+$blue: #3bbfce
+$margin: 16px
+$anchura: 500px
+
+.content-navigation
+    border-color: $blue
+    color: darken($color: $blue, $amount: 10%)
+
+.border
+    padding: $margin/2
+    margin: $margin/2
+    border-color: $blue
+
+@mixin blueLine
+    border: 2px dotted $blue
+    color: $blue
+    font-size: 5em
+    font-weight: bold
+
+.grandLine
+    @include blueLine
+
+.granderLiner
+    @extend .border
+    font-weight: 3em
+    left: auto
+    right: auto
+
+div
+    color: green
+    div
+        color: red
+        div
+            color: $blue
+
+.outer
+    color: green
+    @include blueLine
+    width: $anchura
+
+.example
+    font:
+        family: serif
+        style: normal
+        size: medium
+
+body
+    background-color: mix($blue, grey, 10%)
+
+@function anchoMitad($num)
+    @return $num * 0.5
+
+.divColumnas
+    width: anchoMitad($anchura)
+
+//PONER EL COPDIGO EN OUTER
+
+
+//also comentario
