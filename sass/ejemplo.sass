@@ -1,4 +1,6 @@
 $blue: #3bbfce
+$blueOscuro: darken($color: $blue, $amount: 10%)
+$textColor: black
 $margin: 16px
 $anchura: 500px
 
@@ -54,6 +56,29 @@ body
     width: anchoMitad($anchura)
 
 //PONER EL COPDIGO EN OUTER
+    // sass sass/ejemplo.sass sass/sassACss.css
+
+@for $i from 1 through 4
+    .width-#{$i}
+        width: 10em + $i
+
+@for $i from 1 through 4
+    .height-#{$i}
+        height: 25em * $i
+
+$i: 1
+@while $i < 5
+    .width-#{$i}
+        width: 10em + $i
+    $i: $i + 1
+
+$list: dog cat bird dolphin
+@each $i in $list
+    .image-#{$i}
+        background-image: url('/imagenes/#{$i}.png')
+
+body
+    background-color: if($textColor == white, $blue, $blueOscuro)
 
 
 //also comentario

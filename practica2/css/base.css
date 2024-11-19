@@ -78,16 +78,6 @@ body {
       width: 100%; }
 
 @media (max-width: 850px) {
-  .header {
-    grid-template-columns: 1fr;
-    text-align: center; }
-    .header .nav {
-      grid-auto-flow: row;
-      justify-items: center; }
-    .header .buscador {
-      grid-template-columns: auto;
-      justify-content: center; }
-
   .zonaCentral .lateral {
     grid-column: 1/2;
     grid-row: 1;
@@ -102,5 +92,33 @@ body {
     grid-row: 2/3;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr); } }
+@media (max-width: 680px) {
+  .header {
+    grid-template-columns: 1fr;
+    text-align: center; }
+    .header .nav {
+      grid-auto-flow: row;
+      justify-items: center; }
+    .header .buscador {
+      grid-template-columns: auto;
+      justify-content: center; }
+
+  .zonaCentral {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr; }
+    .zonaCentral .lateral {
+      grid-row: 1;
+      justify-items: center; }
+    .zonaCentral .categoria {
+      grid-row: 3;
+      grid-column: 1;
+      justify-items: center;
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: 1fr; }
+    .zonaCentral .producto {
+      grid-row: 2;
+      justify-items: center;
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: 1fr; } }
 
 /*# sourceMappingURL=base.css.map */

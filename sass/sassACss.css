@@ -44,4 +44,55 @@ body {
 .divColumnas {
   width: 250px; }
 
+.width-1 {
+  width: 11em; }
+
+.width-2 {
+  width: 12em; }
+
+.width-3 {
+  width: 13em; }
+
+.width-4 {
+  width: 14em; }
+
+.height-1 {
+  height: 25em; }
+
+.height-2 {
+  height: 50em; }
+
+.height-3 {
+  height: 75em; }
+
+.height-4 {
+  height: 100em; }
+
+.width-1 {
+  width: 11em; }
+
+.width-2 {
+  width: 12em; }
+
+.width-3 {
+  width: 13em; }
+
+.width-4 {
+  width: 14em; }
+
+.image-dog {
+  background-image: url("/imagenes/dog.png"); }
+
+.image-cat {
+  background-image: url("/imagenes/cat.png"); }
+
+.image-bird {
+  background-image: url("/imagenes/bird.png"); }
+
+.image-dolphin {
+  background-image: url("/imagenes/dolphin.png"); }
+
+body {
+  background-color: #2b9eab; }
+
 /*# sourceMappingURL=sassACss.css.map */
