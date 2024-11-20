@@ -34,7 +34,7 @@ body {
       padding: 5px 10px;
       color: #FFFFFF;
       border: 1px solid #0E1428;
-      border-radius: 4px; }
+      border-radius: 5px; }
     .header .buscador button {
       padding: 5px 15px;
       background-color: #F0A202;
@@ -42,7 +42,7 @@ body {
       cursor: pointer;
       color: #FFFFFF;
       border: 1px solid #0E1428;
-      border-radius: 4px; }
+      border-radius: 5px; }
       .header .buscador button:hover {
         background-color: #F0A202; }
 
@@ -76,9 +76,12 @@ body {
       font-weight: bold;
       color: #FFFFFF;
       border: 1px solid #0E1428;
-      border-radius: 4px;
+      border-radius: 5px;
       height: 100%;
-      width: 100%; }
+      width: 100%;
+      margin: 5px; }
+      .zonaCentral .division .elemento img {
+        width: 80%; }
 
 @media (max-width: 850px) {
   .zonaCentral .lateral {
