@@ -2,6 +2,7 @@
 $primary: #F0A202 //tambien usado para hover
 $secondary: #F18805
 $terciary: #D95D39 //usado para foreground
+$fondoLogo: #FF8915
 $fontColor: #FFFFFF
 $bgColor: #0E1428
 $fontSize: 12px
@@ -24,9 +25,14 @@ body
     font-size: $fontSize
     min-height: 100vh
 
+.logo
+    img
+        max-height: 100%
+        max-width: 100%
+
 .header
     display: grid
-    grid-template-columns: auto 1fr auto
+    grid-template-columns: 20vw 4fr 1fr
     gap: 30px
     align-items: center
     padding: 10px 20px
@@ -36,10 +42,7 @@ body
     top: 0
     z-index: 4
 
-    .logo
-        font-size: $fontSize*2
-        font-weight: bold
-        color: $primary
+
 
     .nav
         display: grid
@@ -101,7 +104,7 @@ body
                 font-size: clamp($fontSize/2, $fontSize*3, $fontSize*5)
                 &:hover
                     color: $bgColor
-                    background-color: $primary
+                    background-color: $fondoLogo
                 
     .categoria
         grid-column: 2 / 3
@@ -110,7 +113,7 @@ body
     .producto
         grid-column: 2 / 3
         grid-row: 2/3
-        order: 1
+        // order: 1
 
     .division
         display: grid
@@ -146,43 +149,43 @@ body
                     transform: scale(1.1)
 
 .footer
-  display: grid
-  grid-template-columns: repeat(4, 1fr)
-  gap: 2rem
-  padding: 2rem
-  background-color: $bgColor
-  color: $fontColor
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2rem
+    padding: 2rem
+    background-color: $bgColor
+    color: $fontColor
 
-  div
-    h3
-      font-size: 1.2rem
-      margin-bottom: 1rem
-      color: $terciary
+    div
+        h3
+            font-size: 1.2rem
+            margin-bottom: 1rem
+            color: $terciary
 
     a
-      display: block
-      text-decoration: none
-      color: $fontColor
-      margin: 0.5rem 0
+        display: block
+        text-decoration: none
+        color: $fontColor
+        margin: 0.5rem 0
 
-      &:hover
-        color: $primary
+        &:hover
+            color: $primary
 
-  .footer-logo
-    grid-column: span 4
-    text-align: center
-    font-size: 1.5rem
-    font-weight: bold
+    .footer-logo
+        grid-column: span 4
+        text-align: center
+        font-size: 1.5rem
+        font-weight: bold
 
-.footer-copyright
-  text-align: center
-  padding: 1rem
-  background-color: $bgColor
-  color: $fontColor
-  font-size: 0.9rem
+    .footer-copyright
+        text-align: center
+        padding: 1rem
+        background-color: $bgColor
+        color: $fontColor
+        font-size: 0.9rem
 
 footer, .footer-copyright
-  margin-top: auto
+    margin-top: auto
 
 //parte responsive -------------------------------------------
 
@@ -247,7 +250,7 @@ footer, .footer-copyright
 
         .lateral
             grid-row: 1
-            grid-column: 1
+            grid-column: 1/3
             justify-items: center
             // CATEGORIAS ESTA BIEN WTF
         .categoria
@@ -260,6 +263,7 @@ footer, .footer-copyright
         
         .producto
             grid-row: 2
+            grid-column: 1/3
             justify-items: center
             grid-template-rows: repeat(4, 1fr)
             grid-template-columns: 1fr
