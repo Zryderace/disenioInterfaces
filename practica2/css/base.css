@@ -1,6 +1,6 @@
 body {
   position: relative;
-  background-color: #0E1428;
+  background-color: #D95D39;
   color: #FFFFFF;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 12px;
@@ -27,8 +27,10 @@ body {
     gap: 15px; }
     .header .nav a {
       text-decoration: none;
+      text-align: center;
       color: #FFFFFF;
-      font-weight: 500; }
+      font-weight: 500;
+      font-size: 24px; }
       .header .nav a:hover {
         color: #0E1428; }
   .header .buscador {
@@ -57,7 +59,9 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
-  height: auto; }
+  height: auto;
+  padding-bottom: 25vh;
+  padding-top: 5vh; }
   .zonaCentral .lateral {
     grid-column: 1/2;
     grid-row: 1/3;
@@ -179,6 +183,17 @@ footer, .footer-copyright {
   margin-top: auto; }
 
 @media (max-width: 1080px) {
+  .zonaCentral {
+    padding-bottom: 10vh; }
+
+  .header .nav {
+    grid-auto-flow: row;
+    justify-items: center; }
+
+  .buscador {
+    grid-template-columns: auto;
+    justify-content: center; }
+
   .zonaCentral .lateral {
     grid-column: 1/2;
     grid-row: 1;
@@ -199,12 +214,17 @@ footer, .footer-copyright {
   .elemento div {
     font-size: 36px; } }
 @media (max-width: 680px) {
+  .zonaCentral {
+    padding-bottom: 10vh; }
+
   .header {
     grid-template-columns: 1fr;
     text-align: center; }
     .header .nav {
       grid-auto-flow: row;
       justify-items: center; }
+      .header .nav a {
+        font-size: 48px; }
     .header .buscador {
       grid-template-columns: auto;
       justify-content: center; }

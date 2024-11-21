@@ -19,7 +19,7 @@ $alturaZonaPrincipal: 100vh
 
 body
     position: relative
-    background-color: $bgColor
+    background-color: $terciary
     color: $fontColor
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
     font-size: $fontSize
@@ -42,16 +42,16 @@ body
     top: 0
     z-index: 4
 
-
-
     .nav
         display: grid
         grid-auto-flow: column
         gap: 15px
         a
             text-decoration: none
+            text-align: center
             color: $fontColor
             font-weight: 500
+            font-size: $fontSize*2
             &:hover
                 color: $bgColor
 
@@ -80,6 +80,8 @@ body
     grid-template-columns: 1fr 2fr
     grid-template-rows: 1fr 1fr
     height: auto
+    padding-bottom: 25vh
+    padding-top: 5vh
 
     .lateral
         grid-column: 1 / 2
@@ -193,14 +195,19 @@ footer, .footer-copyright
     // .header
     //     grid-template-columns: 1fr
     //     text-align: center
+    .zonaCentral
+        padding-bottom: 10vh
 
+    .header
         .nav
             grid-auto-flow: row
             justify-items: center
+            // a
+            //     font-size: $fontSize
             
-        .buscador
-            grid-template-columns: auto
-            justify-content: center
+    .buscador
+        grid-template-columns: auto
+        justify-content: center
 
     .zonaCentral
         //queremos 2x2 33% 66%
@@ -231,6 +238,10 @@ footer, .footer-copyright
 
     // ----------------------------------------------------------
 @media (max-width:680px)
+
+    .zonaCentral
+        padding-bottom: 10vh
+
     .header
         grid-template-columns: 1fr
         text-align: center
@@ -238,6 +249,8 @@ footer, .footer-copyright
         .nav
             grid-auto-flow: row
             justify-items: center
+            a
+                font-size: $fontSize*4
             
         .buscador
             grid-template-columns: auto
