@@ -4,8 +4,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="../imagenes/favIcon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: #F18805;
+            color: #FFFFFF;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td{
+            border: 2px solid #FFFFFF;
+        }
+        .home{
+            background-color: #D95D39;
+        }
+        .blackFriday{
+            background-color: #0E1428;
+            color: #FFFFFF;
+        }
+        .color{
+            color: #FFFFFF;
+        }
+        .color:hover{
+            color: #0E1428;
+        }
+        span{
+            font-style: italic;
+            color: red;
+            text-decoration: line-through;
+            background-color: #fff;
+        }
+        .elemento, .categorias{
+            border: 2px solid #0E1428;
+        }
+        .elemento:hover{
+            background-color: #F18805;
+            color: #0E1428;
+        }
+        .categorias{
+            background-color: #F18805;
+        }
+        .categorias:hover{
+            color: #0E1428;
+            
+        }
+        .categorias img{
+            max-width: 80%;
+            border-radius: 20%;
+            transition: transform 0.2s ease;
+            
+        }
+        .categorias:hover img{
+            transform: scale(1.1);
+        }
+        .footer:hover{
+            color: #F18805;
+        }
+    </style>
 </head>
 <body>
-    
+    <!--TODO INDEX Y PEDIDOS.HTML-->
+    <table class="home">
+        <tr>
+            <td>Elemento</td>
+            <td>Uso</td>
+            <td>Ejemplo</td>
+        </tr>
+        <tr>
+            <td>
+                Color letras
+            </td>
+            <td>#FFFFFF y #0E1428 para los hover</td>
+            <td class="color">Texto</td>
+        </tr>
+        <tr>
+            <td>Color de fondo</td>
+            <td>#D95D39</td>
+            <td>El usado para esta tabla</td>
+        </tr>
+        <tr>
+            <td>Logo</td>
+            <td>Ocupa el 20% del navegador</td>
+            <td><img src="../imagenes/logo.PNG" alt=""></td>
+        </tr>
+        <tr>
+            <td>Span</td>
+            <td>Precios antiguos tachados en #FF0000 y cursiva</td>
+            <td><span>Precio antiguo</span></td>
+        </tr>
+        <tr>
+            <td>Zona principal</td>
+            <td>Grid usando 2x2</td>
+            <td>Cambia el grid y su order dependiendo que nos pide el ejercicio</td>
+        </tr>
+        <tr>
+            <td>Elementos categorias</td>
+            <td>borde negro con hover para cambiar letra a #0E1428 y fondo a #F18805</td>
+            <td><div class="elemento">Elemento</div></td>
+        </tr>
+        <tr>
+            <td>Header</td>
+            <td>grid con 6 columnas, responsive</td>
+            <td>cada elemento tiene un espacio, cuando se hacve pequeño se cambia a 1 columna, 6 filas, es sticky excepto en moviles</td>
+        </tr>
+        <tr>
+            <td>Categorias Y productos</td>
+            <td>Imagen con texto, la imagen es 500x333, y tiene una animacion con hover, texto pasa a #0E1428 fondo </td>
+            <td><div class="categorias"><img src="../imagenes/balon.jpg" alt=""><div>Texto</div></div></td>
+        </tr>
+        <tr>
+            <td>Tamaño Fuente</td>
+            <td>12 px</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Fuentes</td>
+            <td>Arial, "Helvetica Neue", Helvetica, sans-serif</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Footer</td>
+            <td>grid 4 columnas</td>
+            <td>Elementos como Empresa, Ayuda, Recursos y el logo</td>
+        </tr>
+        <tr>
+            <td>Fondo footer</td>
+            <td>#0E1428</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Links footer</td>
+            <td>color </td>
+            <td class="footer">texto</td>
+        </tr>
+        <tr>
+            <td>Links footer</td>
+            <td>color </td>
+            <td class="footer">texto</td>
+        </tr>
+        <tr>
+            <td>Favicon</td>
+            <td>logo mas pequeño, usado en esta misma pagina</td>
+            <td></td>
+        </tr>
+    </table>
+    <table class="blackFriday">
+        <tr>
+            <td>Elemento</td>
+            <td>Uso</td>
+            <td>Ejemplo/Explicacion</td>
+        </tr>
+        <tr>
+            <td>Fuente</td>
+            <td>Arial, "Helvetica Neue", Helvetica, sans-serif</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Logo</td>
+            <td>Se puede usar con otros colores para el blackFriday (opcional)</td>
+            <td><img src="../imagenes/logoBF.png" alt=""></td>
+        </tr>
+        <tr>
+            <td>Fondo pagina</td>
+            <td>#0E1428 color fondo pagina</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Fondo contraste</td>
+            <td>#212529 Usado para mayor contraste</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Texto header</td>
+            <td>#FFFFFF con hover en #F18805</td>
+            <td class="footer">texto</td>
+        </tr>
+        <tr>
+            <td>Icono carrito</td>
+            <td>Icono de Bootstrap</td>
+            <td><i class="bi bi-cart ms-2"></i></td>
+        </tr>
+        <tr>
+            <td>Favicon</td>
+            <td>logo mas pequeño, usado en esta misma pagina</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Header</td>
+            <td>responsive</td>
+            <td>se convierte en 3 lineas desplegables cuando es pequeño, 6 columnas</td>
+        </tr>
+        <tr>
+            <td>Alert</td>
+            <td>Letras negro fondo naranja oscuro</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Carrusel</td>
+            <td>imagenes cambiando</td>
+            <td>set de imagenes con texto explicativo por encima, letra blanca, fondo negro</td>
+        </tr>
+        <tr>
+            <td>Productos</td>
+            <td>Hechos con Card</td>
+            <td>imagen de 500*333 con un titulo en negrita, fondo gris y pequeña explicacion, tiene boton de añadir al carro</td>
+        </tr>
+        <tr>
+            <td>Boton añadir al carro</td>
+            <td>color fondo mas oscuro</td>
+            <td>acciona un alert, tiene hover naranja para mas visibilidad</td>
+        </tr>
+        <tr>
+            <td>Alert</td>
+            <td>Se avisa al cliente</td>
+            <td>ahora mismo no esta implementado, tiene botones para cerrar, añadir al carro</td>
+        </tr>
+        <tr>
+            <td>Footer</td>
+            <td>4 columnas, Sobre nosotros, Ayuda, Redes y Contacto</td>
+            <td>el texto tiene todo hover naranja</td>
+        </tr>
+        <tr>
+            <td>Redes Sociales</td>
+            <td>uso de imagenes do boostrap</td>
+            <td>usado para twitter<i class="bi bi-twitter"></i>, facebook<i class="bi bi-facebook"></i> y linkedin<i class="bi bi-linkedin"></i></td>
+        </tr>
+        <tr>
+            <td>Imagenes</td>
+            <td>todas de Pexel</td>
+            <td>Libre uso siempre acreditanto a la pagina</td>
+        </tr>
+    </table>
 </body>
 </html>

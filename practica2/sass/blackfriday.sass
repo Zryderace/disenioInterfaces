@@ -1,0 +1,71 @@
+//colors: F0A202 F18805 D95D39 0E1428 FFFFFF
+$primary: #F0A202 //tambien usado para hover
+$secondary: #F18805
+$terciary: #D95D39 //usado para foreground
+$fondoLogo: #FF8915
+$fontColor: #FFFFFF
+$bgColor: #0E1428
+
+body
+    background-color: $bgColor
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+
+
+.navbar-nav
+  .nav-link
+    color: $fontColor
+    transition: color 0.3s ease
+
+    &:hover
+      color: $primary
+
+.navbar-brand
+  display: flex
+  align-items: center
+  padding: 0
+  img.navbar-logo
+    height: 100px   
+    margin-right: 10px
+
+.alert-warning
+  background-color: $terciary   // Override default Bootstrap color
+  color: $bgColor             // Override default Bootstrap text color
+  font-weight: 700
+  strong
+    color: inherit                     // Ensure the <strong> tag inherits the custom text color
+    font-weight: 900
+  .btn-close
+    filter: invert(1)
+
+.carousel-caption
+  text-align: center
+  font-weight: 900
+  font-size: 120%
+  h5, p
+    font-size: 100%
+    font-weight: 600
+    background-color: $bgColor 
+    color: $fontColor                     
+    padding: 0.5rem                    
+    border-radius: 0.25rem             
+    width: fit-content
+    max-width: 100%
+    margin: 0 auto
+    &:hover
+      color: $primary
+
+
+.btn-primary
+    background-color: $bgColor
+    border-color: $fontColor
+    &:hover
+        background-color: $primary
+        border-color: $bgColor
+        color: $bgColor
+
+footer
+    p, a
+        &:hover
+            // usado el important ya que si no
+            // el hover de los links no funciona
+            color: $primary !important
