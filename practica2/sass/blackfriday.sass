@@ -7,9 +7,8 @@ $fontColor: #FFFFFF
 $bgColor: #0E1428
 
 body
-    background-color: $bgColor
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
-
+  background-color: $bgColor
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
 
 .navbar-nav
   .nav-link
@@ -24,17 +23,21 @@ body
   align-items: center
   padding: 0
   img.navbar-logo
-    height: 100px   
+    height: 100px
     margin-right: 10px
 
 .alert-warning
-  background-color: $terciary   // Override default Bootstrap color
-  color: $bgColor             // Override default Bootstrap text color
+  // cambiar color base
+  background-color: $terciary
+  // cambiar color base
+  color: $bgColor
   font-weight: 700
   strong
-    color: inherit                     // Ensure the <strong> tag inherits the custom text color
+    //have que el color de negrita sea el mismo
+    color: inherit
     font-weight: 900
   .btn-close
+    //invierte negrita
     filter: invert(1)
 
 .carousel-caption
@@ -44,28 +47,26 @@ body
   h5, p
     font-size: 100%
     font-weight: 600
-    background-color: $bgColor 
-    color: $fontColor                     
-    padding: 0.5rem                    
-    border-radius: 0.25rem             
+    background-color: $bgColor
+    color: $fontColor
+    padding: 0.5rem
+    border-radius: 0.25rem
     width: fit-content
     max-width: 100%
     margin: 0 auto
     &:hover
       color: $primary
 
-
 .btn-primary
-    background-color: $bgColor
-    border-color: $fontColor
-    &:hover
-        background-color: $primary
-        border-color: $bgColor
-        color: $bgColor
+  background-color: $bgColor
+  border-color: $fontColor
+  &:hover
+    background-color: $primary
+    border-color: $bgColor
+    color: $bgColor
 
 footer
-    p, a
-        &:hover
-            // usado el important ya que si no
-            // el hover de los links no funciona
-            color: $primary !important
+  p, a
+    &:hover
+      // usado el important ya que si no  el hover de los links no funciona
+      color: $primary !important
