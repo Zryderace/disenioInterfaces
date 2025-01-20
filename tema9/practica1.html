@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .white{
+            background-color: #fff;
+            color: black;
+        }
+        .black{
+            background-color: black;
+            color: #fff;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div id="1">
+        <h1 id="h1">Texto h1</h1>
+        <p id="p">Parrafito</p>
+        <div>
+            <input type="button" value="ampliar" onclick="aumentar()" />
+        </div>
+        <div>
+            <input type="button" value="disminuir" onclick="disminuir()" />
+        </div>
+    </div>
+
+    <script>
+        function aumentar() {
+            tamanoH1 = $("#h1").css("font-size");
+            tamanoP = $("#p").css("font-size");
+
+            tamanoH1 = parseInt(tamanoH1) + 10;
+            tamanoP = parseInt(tamanoP) + 10;
+
+            $("#h1").css("font-size", tamanoH1);
+            $("#p").css("font-size", tamanoP);
+        }
+        function disminuir() {
+            tamanoH1 = $("#h1").css("font-size");
+            tamanoP = $("#p").css("font-size");
+
+            tamanoH1 = parseInt(tamanoH1) - 10;
+            tamanoP = parseInt(tamanoP) - 10;
+
+            $("#h1").css("font-size", tamanoH1);
+            $("#p").css("font-size", tamanoP);
+        }
+    </script>
+
+    <div id="2">
+        <div>
+            <input type="button" value="izquierda" onclick="izquierda()" />
+        </div>
+        <div>
+            <input type="button" value="derecha" onclick="derecha()" />
+        </div>
+    </div>
+
+    <script>
+        function izquierda() {
+            tamanoP = $("#p").css("margin-left");
+
+            tamanoP = parseInt(tamanoP) - 10;
+
+            $("#p").css("margin-left", tamanoP);
+        }
+        function derecha() {
+            tamanoP = $("#p").css("margin-left");
+
+            tamanoP = parseInt(tamanoP) + 10;
+
+            $("#p").css("margin-left", tamanoP);
+        }
+    </script>
+
+    <div id="3">
+        <div>
+            <input type="button" value="rojo" onclick="rojo()" />
+        </div>
+        <div>
+            <input type="button" value="amarillo" onclick="amarillo()" />
+        </div>
+        <div>
+            <input type="button" value="azul" onclick="azul()" />
+        </div>
+    </div>
+
+    <script>
+        function rojo() {
+            $("#p").css("background-color", "red");
+        }
+        function amarillo() {
+            $("#p").css("background-color", "yellow");
+        }
+        function azul() {
+            $("#p").css("background-color", "blue");
+        }
+    </script>
+
+    <div id="4">
+        <input type="button" value="Color actual" onclick="color()" />
+    </div>
+
+    <script>
+        function color() {
+            alert($("#p").css("background-color"));
+        }
+    </script>
+
+    <div id="5">
+        <input type="button" value="Alert" onclick="alerta()" />
+    </div>
+
+    <script>
+        function alerta() {
+            alert(document.documentElement.outerHTML);
+        }
+    </script>
+
+    <div>
+        <input class="inputito" type="text" id="1" value="1" />
+        <input class="inputito" type="text" id="2" value="2" />
+        <input class="inputito" type="text" id="3" value="3" />
+        <input class="inputito" type="text" id="4" value="4" />
+        <input type="button" value="Alertas foreach" onclick="alertas()" />
+        <input type="button" value="aumentar" onclick="aumentar()">
+    </div>
+
+    <script>
+        function alertas() {
+            $(".inputito").each(function () {
+                let value = $(this).attr("value");
+                alert(value);
+            });
+        }
+        function aumentar() {
+            $(".inputito").each(function () {
+                let valor = $(this).val();
+                valor = parseInt(valor) + 1
+                $(this).attr("value", valor)
+            });
+        }
+
+        //atr para html (href, id data)
+        //prop porpiedades (checked disabled selected)
+    </script>
+
+    <div>
+        <input class="atrVSProp" type="text" value="1">
+        <input type="checkbox" id="myCheckbox" checked>
+        <input type="button" value="prueba attr+1" onclick="pruebaAtr()">
+        <input type="button" value="prueba prop-1" onclick="pruebaProp()">
+    </div>
+
+    <script>
+        function pruebaAtr() {
+            alert($("#myCheckbox").attr("checked"))
+            $("#myCheckbox").attr("checked", false)
+
+            let value = $(".atrVSProp").attr("value")
+            $(".atrVSProp").attr("value", parseInt(value) + 1)
+        }
+        function pruebaProp() {
+            alert($("#myCheckbox").prop("checked"))
+            $("#myCheckbox").prop("checked", false)
+
+            let value = $(".atrVSProp").prop("value")
+            $(".atrVSProp").prop("value", parseInt(value) + 1)
+        }
+    </script>
+
+    <div>
+        <form action="">
+            <select name="" id="select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <input class="boton" type="button" value="boton 1">
+            <input class="boton" type="button" value="boton 2">
+            <p id="texto"></p>
+        </form>
+    </div>
+
+    <script>
+        $("#select").change(function () {
+            alert("el valor seleccionado es " + $(this).val())
+            $("#texto").prepend("ultima accion: change<br>")
+        });
+        $(".boton").click(function () {
+            alert("boton clickado: " + $(this).val())
+            if ($(this).val() == "boton 1") {
+                $("#texto").append("boton clickado: " + $(this).val() + "<br>")
+            } else {
+                $("#texto").prepend("boton clickado: " + $(this).val() + "<br>")
+            }
+
+        })
+    </script>
+
+
+    <div>
+        <button id="btn1" disabled>Boton deshabilitado</button>
+        <button id="btn2">Habilitar</button>
+    </div>
+
+    <script>
+        $("#btn2").click(function () {
+            // $("#btn1").removeAttr("disabled")
+            // $("#btn1").text("Boton habilitado")
+
+            $("#btn1").prop("disabled")
+            ? $("#btn1").removeAttr("disabled").text("boton habilitado")
+            : $("#btn1").attr("disabled","disabled").text("boton deshabilitado")
+        })
+    </script>
+
+    <div>
+        <input type="checkbox" name="" id="checkeando" checked>
+        <input type="button" value="Desmarcar" id="marcamiento">
+    </div>
+
+    <script>
+        $("#marcamiento").click(function(){
+            if ($("#checkeando").prop("checked")) {
+                $("#checkeando").removeAttr("checked")
+                $("#marcamiento").attr("value","Marcar")
+            } else {
+                $("#checkeando").attr("checked","checked")
+                $("#marcamiento").attr("value","Desmarcar")
+            }
+        })
+    </script>
+
+    <div>
+        <img id="img" src="logoBF.png" title="alt1">
+        <input type="button" value="cambiar alt" id="alterando">
+    </div>
+
+    <script>
+        $("#alterando").click(function(){
+            $("#img").prop("title")=="alt1"
+            ? $("#img").attr("title","alt2")
+            : $("#img").attr("title","alt1")
+        })
+    </script>
+
+    <div>
+        <p id="sinClase">parrafo sin clase</p>
+        <input type="button" value="dar clase" id="addClass">
+        <p id="conClase" class="black">parrafo con clase</p>
+        <input type="button" value="quitar clase" id="removeClass">
+        <p id="cambiaClase" class="white">parrafo alterna clase</p>
+        <input type="button" value="cambiar clase" id="toggleClass">
+    </div>
+
+    <script>
+        $("#addClass").click(function(){
+            $("#sinClase").addClass("black")
+        })
+        $("#removeClass").click(function(){
+            $("#conClase").removeClass("black")
+        })
+        $("#toggleClass").click(function(){
+            $("#cambiaClase").toggleClass("white black")
+        })
+    </script>
+
+    <div>
+        <p id="parraso" class="black">OG parrafo</p>
+        <input id="antes" type="button" value="antes">
+        <input id="despues" type="button" value="despues">
+    </div>
+
+    <script>
+        $("#antes").click(function(){
+            $("#parraso").before("<p>Texto antes</p>")
+        })
+        $("#despues").click(function(){
+            $("#parraso").after("<p>Texto despues</p>")
+        })
+    </script>
+
+    <div>
+        <p id="eliminar">Parrafo a eliminar</p>
+        <input id="remove" type="button" value="Eliminar">
+        <div id="vaciar">
+            <p>un parrafo</p>
+            <p>otro parrafo</p>
+        </div>
+        <input id="empty" type="button" value="vaciar">
+    </div>
+
+    <script>
+        $("#remove").click(function(){
+            $("#eliminar").remove()
+        })
+        $("#empty").click(function(){
+            $("#vaciar").empty()
+        })
+
+    </script>
+
+</body>
+
+</html>

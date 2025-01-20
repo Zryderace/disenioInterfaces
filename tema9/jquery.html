@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="jquery-3.7.1.min.js"></script>
+  <style>
+    .cambiado{
+      background-color: black;
+      color: white;
+      margin-left: 500px;
+    }
+    .noCambiado{
+      height: 400px; width: 500px; background-color: red; text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pepito">DIV DE PRUEBA</div>
+  <div id="2">DIV DE PRUEBA2222222</div>
+
+  <script>
+    //alert($("div#2").html())
+  </script>
+
+  <h1>hola mundo</h1>
+  <p id="texto">este es un texto que cambia</p>
+  <button id="boton">Click</button>
+
+  <script>
+    $(document).ready(function () {
+      //evento al hacer click
+      $("#boton").click(function () {
+        $("#texto").text("El texto cambio uwu");
+        alert("se ha ejecutado el codigo jQ");
+      });
+    });
+  </script>
+
+  <p id="texto2">Texto</p>
+  <input type="button" id="boton2" value="Hola" />
+
+  <script>
+    $(document).ready(function () {
+      jQuery("p").css("background-color", "red");
+      jQuery("input").attr("value", "Adios");
+    });
+  </script>
+
+  <div id="myDiv">Hello world</div>
+  <button id="myButton">Click</button>
+
+  <script>
+    $(document).ready(function () {
+      $("#myButton").click(function () {
+        $("#myDiv")
+          .text("Texto actualizado")
+          .css("color", "red")
+          .slideUp(1000);
+      });
+    });
+  </script>
+
+  <h1 id="titulo-principal">Bienvenidos</h1>
+  <p class="info">Párrafo</p>
+  <p>Otro párrafo</p>
+  <ul id="miLista">
+    <li class="item" data-custom="uno">Elemento 1</li>
+    <li class="item destacado" data-custom="dos">Elemento 2</li>
+    <li class="item">Elemento 3</li>
+  </ul>
+  <input type="text" name="usuario" value="Nombre de usuario" />
+  <input type="checkbox" checked />
+  <a href="#" title="Enlace a ningún lado">Haz clic aquí</a>
+
+  <script>
+    // $("[title]").css("text-decoration","underline")
+    // $("input[name='usuario']").val("Nuevo usuario")
+    // $("ul li:first").css("font-style","italic")
+    // $("ul li:last").css("font-style","italic")
+    // $("ul li:eq(1)").css("text-transform","uppercase")
+    // second one
+    // $(".item:not(.destacado)").css("color","gray")
+    // $("li:even").css("background-color", "red")
+    // $("li:odd").css("background-color", "blue")
+    // $("ul > li").css("padding","5px")
+    // $("p + ul").css("border","1px solid black")
+    // $("h1, .info").css("margin-bottom","20px")
+    // $(":checked").css("outline","2px solid red")
+    // $(":input").css("margin","10px 0")
+  </script>
+
+  <h1 id="manipulacionCSS">Obetener datos css</h1>
+  <div id="box1" class="noCambiado">Cajita</div>
+  <button id="getDimensions">Obetner data</button>
+  <p id="output"></p>
+  <button id="cambiarClase">Cambiar clase</button>
+
+  <script>
+    // $(document).ready(function () {
+    //   $("#data").click(function () {
+    //     $("#cajita").width();
+    //     $("#cajita").height();
+    //     $("#cajita").innerWidth();
+    //     $("#cajita").innerHeight();
+    //     $("#cajita").outerWidth(true);
+    //     $("#cajita").offset();
+    //     $("#cajita").position();
+
+    //     $("#datitos").text(`Width: ${$("#cajita").width()} <br>
+    //       height: ${$("#cajita").height()} <br>
+    //       inner width: ${$("#cajita").innerWidth()} <br>
+    //       inner height: ${$("#cajita").innerHeight()} <br>
+    //       true outer width: ${$("#cajita").outerWidth(true)} <br>
+    //       offset: ${$("#cajita").offset()} <br>
+    //       position: ${$("#cajita").position()}`)
+    //   });
+    // });
+    $('#getDimensions').click(function () {
+      const box = $('#box1');
+      const width = box.width(); box.height();
+      const height = box.height();
+      const innerWidth = box.innerWidth(); const innerHeight = box.innerHeight(); const outerWidth = box.outerWidth();
+      const outerHeight = box.outerHeight();
+      const outerWidthWithMargin = box.outerWidth(true);
+      const offset = box.offset(); // posición relativa al documento
+      const position = box.position(); // posición relativa a su contenedor padre
+      $('#output').html(`
+          <p><strong>Dimensiones de la caja:</strong></p>
+          <ul>
+          <li>Width: ${width}px</li>
+          <li>Height: ${height}px</li>
+          <li>Inner Width (con padding): ${innerWidth}px</li>
+          <li>Inner Height (con padding): ${innerHeight}px</li>
+          <li>Outer Width (con padding y borde): ${outerWidth}px</li>
+          <li>Outer Height (con padding y borde): ${outerHeight}px</li>
+          <li>Outer Width (con padding, borde y margen): ${outerWidthWithMargin}px</li>
+          <li>Offset (posición relativa al documento): { top: ${offset.top}px, left: ${offset.left}px}
+          <li>Position (posición relativa al contenedor padre): { top: ${position.top}px, left: ${position.left}px}
+          </ul>`);})
+  </script>
+
+  <script>
+    $("#cambiarClase").click(function(){
+      let box = $("#box1")
+      box.toggleClass("cambiado noCambiado")
+    })
+  </script>
+
+
+
+</body>
+
+</html>

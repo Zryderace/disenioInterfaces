@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <a id="link" href="google.com">Prop</a>
+
+    <script>
+      // leer valor
+      // alert($("#link").prop("href"))
+      // cambiar valor
+      // $("#link").prop("href","youtube.com")
+    </script>
+    <div>
+      <input type="text" value="texto cargado" id="txt1" />
+      <input type="text" value="texto cargado" id="txt2" />
+      <input type="text" value="texto cargado" id="txt3" />
+      <input type="text" value="texto cargado" id="txt4" />
+    </div>
+    <script>
+      // $("input").prop("value","texto cambiado")
+    </script>
+
+    <div id="contenido">
+      <ul>
+        <li>HTML</li>
+        <li>HTML</li>
+        <li>HTML</li>
+      </ul>
+    </div>
+
+    <script>
+    //   obtenemosHTML = $("#contenido").html();
+    //   alert(obtenemosHTML);
+    </script>
+
+    <div>
+        <input type="button" value="aumentar" onclick="aumentar()">
+        <br>
+        <input type="button" value="margen" onclick="margin()">
+        <br>
+
+        <img id="imagen" src="logoBF.png" style="width: 800px;height: 120px; margin-top: 0px; margin-left: 0px;">
+    </div>
+    <script>
+        function aumentar(){
+            tamanoWidth = $("#imagen").css("width")
+            tamanoHeight = $("#imagen").css("height")
+
+            tamanoWidth=parseInt(tamanoWidth)+10
+            tamanoHeight=parseInt(tamanoHeight)+10
+
+            $("#imagen").css("width",tamanoWidth)
+            $("#imagen").css("height",tamanoHeight)
+        }
+        function margin() {
+            marginTop = $("#imagen").css("margin-top")
+            marginLeft = $("#imagen").css("margin-left")
+
+            marginTop=parseInt(marginTop)+10
+            marginLeft=parseInt(marginLeft)+10
+
+            $("#imagen").css("margin-top",marginTop)
+            $("#imagen").css("margin-left",marginLeft)
+
+
+        }
+    </script>
+
+  </body>
+</html>

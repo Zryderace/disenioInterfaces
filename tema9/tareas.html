@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        .notDone {
+            background-color: lightblue;
+        }
+
+        .notDone:hover {
+            background-color: darkcyan;
+        }
+
+        .done {
+            background-color: indigo;
+            color: white;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>Lista de tareas</div>
+        <input type="text" name="usuario" value="Agregar tarea" />
+        <div id="tareas"></div>
+        <div>
+            <button id="add">Agregar Tarea</button>
+        </div>
+        <div>
+            <button id="delete">Vaciar Lista</button>
+        </div>
+        <div>Tareas completadas</div>
+        <div id="completadas"></div>
+    </div>
+
+    <script>
+        // $("input[name='usuario']").val("Nuevo usuario")
+        $("#add").click(function () {
+            let tarea = $("input[name='usuario']");
+            let nuevo = $("<p></p>").text(tarea.val());
+            let lista = $("#tareas");
+
+            if (tarea.val().trim() != "") {
+                nuevo.addClass("notDone")
+                tarea.val("")
+
+                nuevo.click(function () {
+                    let elemento = $(this)
+                    // elemento.removeClass("notDone")
+                    // elemento.addClass("done")
+                    elemento.toggleClass("notDone done")
+                })
+
+                lista.append(nuevo)
+            }
+
+
+        })
+        // $(".notDone").click(function(){
+        //     let elemento = $(this)
+        //     elemento.removeClass("notDone")
+        //     elemento.addClass("done")
+        // })
+        $("#delete").click(function () {
+            
+            let parent = $("#tareas")
+            let children = parent.children()
+            let nuevoParent = $("#completadas")
+
+            for (let i = 0; i < children.length; i++) {
+
+                let child = $(children[i])
+                
+                if(child.hasClass("done")){
+                    //esto mueve el hijo
+                    nuevoParent.append(child)
+                    // child.remove()
+                }
+            }
+            
+            // $("#tareas").empty()
+        })
+    </script>
+
+
+</body>
+
+</html>
