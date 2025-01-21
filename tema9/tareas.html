@@ -67,7 +67,7 @@
         //     elemento.addClass("done")
         // })
         $("#delete").click(function () {
-            
+
             let parent = $("#tareas")
             let children = parent.children()
             let nuevoParent = $("#completadas")
@@ -75,15 +75,146 @@
             for (let i = 0; i < children.length; i++) {
 
                 let child = $(children[i])
-                
-                if(child.hasClass("done")){
+
+                if (child.hasClass("done")) {
                     //esto mueve el hijo
                     nuevoParent.append(child)
                     // child.remove()
                 }
             }
-            
+
             // $("#tareas").empty()
+        })
+    </script>
+
+    <script>
+        let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        let mayoresCinco = numeros.filter(num => num > 5)
+        console.log(mayoresCinco)
+
+        let primerMayor = numeros.find(num => num > 5)
+        console.log(primerMayor)
+
+        let miltiplicados = numeros.map(num => num * 2)
+        console.log(miltiplicados)
+
+    </script>
+
+    <div id="container">
+        <button id="activate">Activar evento</button>
+        <p id="parrafo" class="notDone">Haz click</p>
+    </div>
+
+    <script>
+        $("#container").on("click", "#activate", function () {
+            $("#parrafo").on("click", function () {
+                $("#parrafo").toggleClass("notDone done")
+            })
+            $("#activate").text("Desactivar Evento").attr("id", "deactivate")
+        })
+
+        $("#container").on("click", "#deactivate", function () {
+            $("#parrafo").off("click")
+            $("#deactivate").text("Activar Evento").attr("id", "activate")
+        })
+    </script>
+
+    <div id="ejemplo">
+        <h2>ejemplo map filter find</h2>
+        <div id="1" data-nombre="Juan" data-edad="25"></div>
+        <div id="2" data-nombre="Ana" data-edad="30"></div>
+        <div id="3" data-nombre="Carlos" data-edad="90"></div>
+        <div id="4" data-nombre="Laura" data-edad="35"></div>
+        <button id="mas25">Mayores 25</button>
+        <button id="nombres">Solo nombres</button>
+        <button id="firstMas30">Primero mas 30</button>
+        <button id="mas30Nombres">mas 30 nombres</button>
+        <button onclick="escribirTodo()">Reset</button>
+    </div>
+
+    <script>
+
+        function escribirTodo() {
+            let divs = $("#ejemplo div")
+            for (let i = 0; i < divs.length; i++) {
+                let div = $(divs[i])
+                let nombre = div.attr("data-nombre")
+                let edad = div.attr("data-edad")
+                let data = nombre + ", " + edad + " años"
+                div.text(data)
+                div.show()
+            }
+        }
+
+        $(document).ready(escribirTodo())
+
+        $("#mas25").click(function(){
+            escribirTodo()
+            let divs = $("#ejemplo div")
+            for (let i = 0; i < divs.length; i++) {
+                let div = $(divs[i])
+                let edad = parseInt(div.attr("data-edad"))
+                if (edad<=25) {
+                    div.hide()
+                }
+            }
+        })
+
+        $("#nombres").click(function(){
+            escribirTodo()
+            let divs = $("#ejemplo div")
+            for (let i = 0; i < divs.length; i++) {
+                let div = $(divs[i])
+                let nombre = div.attr("data-nombre")
+                div.text(nombre)
+            }
+        })
+
+        $("#firstMas30").click(function(){
+            escribirTodo()
+            let divs = $("#ejemplo div")
+            var found = false
+            for (let i = 0; i < divs.length; i++) {
+                let div = $(divs[i])
+                let edad = parseInt(div.attr("data-edad"))
+                if (found) {
+                    div.hide()
+                } else if (edad<=30) {
+                    div.hide()
+                } else{
+                    found = true
+                }
+            }
+        })
+
+        $("#mas30Nombres").click(function(){
+            escribirTodo()
+            let divs = $("#ejemplo div")
+            for (let i = 0; i < divs.length; i++) {
+                let div = $(divs[i])
+                let edad = div.attr("data-edad")
+                if (edad>30) {
+                    let nombre = div.attr("data-nombre")                
+                    let data = nombre
+                    div.text(data)
+                } else {
+                    div.hide()
+                }
+            }
+        })
+
+
+    </script>
+
+    <div>
+        <h2>Eventos teclado</h2>
+        <input type="text" name="" id="cajaTexto">
+        <p id="teclaPulsada"></p>
+    </div>
+
+    <script>
+        $("#cajaTexto").keypress(function(e){
+            $("#teclaPulsada").html(e.which + " " + String.fromCharCode(e.which))
         })
     </script>
 
