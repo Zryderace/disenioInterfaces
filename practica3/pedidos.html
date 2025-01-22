@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="icon" href="favIcon.png" type="image/png">
+    <link rel="stylesheet" href="pedidos.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="pedidos.js"></script>
+</head>
+<body>
+    <!--ADMINISTRADOR-->
+
+    <div class="header">
+        <div class="logo"><img src="logo.PNG" alt=""></div>
+        <nav class="nav">
+            <a href="#">Página Principal</a>   
+            <a href="#">Proveedores</a>
+        </nav>
+        <div class="buscador">
+            <input type="text" placeholder="Buscar..." />
+            <button>Search</button>
+        </div>
+    </div>
+    
+    <br>
+
+    <!--
+        TABLA CON 
+        CODIGO/ID
+        IMAGEN
+        FECHA
+        IMPORTE
+        ACCIONES
+    -->
+
+    <div class="titulo">Pendiente</div>
+
+    <input type="text" value="Buscar por ID" id="cajaTextoPendiente">
+
+    <button id="archivarPendiente">Archivar Listado</button>
+
+    <div id="pendiente" class="grid-container">
+        <div class="column">
+            <div class="grid-item titulo">ID</div>
+
+        </div>
+        
+        <div class="column">
+            <div class="grid-item titulo">PRODUCTO</div>
+
+        </div>
+        
+        <div class="column">
+            <div class="grid-item titulo">PRECIO</div>
+
+        </div>
+        
+        <div class="column">
+            <div class="grid-item titulo">IMAGEN</div>
+        </div>
+        
+        <div class="column">
+            <div class="grid-item titulo">ESTADO</div>
+            
+        </div>
+
+        <div class="column">
+            <div class="grid-item titulo">TELEFONO</div>
+            
+        </div>
+
+        <!--
+
+        -->
+
+        <div class="column">
+            <div class="grid-item titulo">ACCIONES</div>
+        </div>
+    </div>
+
+    <div class="titulo">Atendido</div>
+
+    <input type="text" value="Buscar por ID" id="cajaTextoAtendido">
+
+    <button id="archivarAtendido">Archivar Listado</button>
+
+    <div id="atendido" class="grid-container">
+        <div class="column">
+            <div class="grid-item titulo">ID</div>
+
+        </div>
+        
+        <div class="column">
+            <div class="grid-item titulo">PRODUCTO</div>
+
+        </div>
+        
+        <div class="column">
+            <div class="grid-item titulo">PRECIO</div>
+
+        </div>
+        
+        <div class="column">
+            <div class="grid-item titulo">IMAGEN</div>
+        </div>
+        
+        <div class="column">
+            <div class="grid-item titulo">ESTADO</div>
+            
+        </div>
+
+        <div class="column">
+            <div class="grid-item titulo">TELEFONO</div>
+            
+        </div>
+
+        <!--
+
+        -->
+
+        <div class="column">
+            <div class="grid-item titulo">ACCIONES</div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <p>&copy; 2024 Sporty SL. Todos los derechos reservados.</p>
+    </div>
+
+</body>
+</html>
