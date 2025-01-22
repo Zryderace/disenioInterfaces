@@ -130,7 +130,11 @@ window.onload = function () {
         $("#pendiente .column").each(function(idColumna){
             //por cada columna, sabiendo la fila, recoje la celda
             //y la pega en la otra tabla
+            //cambiar el texto de la fil de uno a otro
             let celda = $(this).find(".grid-item").eq(idFila)
+            if(idColumna===4){
+                celda.text("atendido")
+            }
             $("#atendido .column").eq(idColumna).append(celda)
         })
     })
@@ -139,6 +143,9 @@ window.onload = function () {
         let idFila = $(this).closest(".grid-item").index()
         $("#atendido .column").each(function(idColumna){
             let celda = $(this).find(".grid-item").eq(idFila)
+            if(idColumna===4){
+                celda.text("pendiente")
+            }
             $("#pendiente .column").eq(idColumna).append(celda)
         })
     })
@@ -163,6 +170,12 @@ window.onload = function () {
                 }
             })
         })
+    })
+
+    $("#estilo").click(function(){
+        document.body.classList.toggle("temaOscuro")
+        //TODO CAMBIAR LOGO
+        let logo = document.querySelector(".logo img")
     })
 
 }
