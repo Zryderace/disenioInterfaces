@@ -214,10 +214,234 @@
 
     <script>
         $("#cajaTexto").keypress(function(e){
-            $("#teclaPulsada").html(e.which + " " + String.fromCharCode(e.which))
+            $("#teclaPulsada").html("holita " + e.which + " " + String.fromCharCode(e.which))
         })
     </script>
 
+    <div>
+        <h2>eventos teclado</h2>
+        <input type="text" placeholder="texto" id="eventos">
+        <p id="keyAbajo"></p>
+        <p id="keyAguantar"></p>
+        <p id="keyArriba"></p>
+        <p id="actual"></p>
+    </div>
+
+    <script>
+        $("#eventos").keydown(function(e){
+
+            let caracter = String.fromCharCode(e.which)
+
+            $("#keyAbajo").html("tecla pulsadaAbajo " + caracter)
+            $("#actual").text($("#actual").text() + caracter)
+        })
+        $("#eventos").keypress(function(e){
+            $("#keyAguantar").html("tecla press " + e.key)
+        })
+        $("#eventos").keyup(function(e){
+            $("#keyArriba").html("tecla dejada de pulsar " + String.fromCharCode(e.which))
+        })
+    </script>
+
+    <div>
+        <h2>focus blur change submit</h2>
+        <form action="" id="form">
+            <input type="text" id="focusBlur">
+            <select name="" id="change">
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+            </select>
+            <input type="submit" id="submit">
+        </form>
+        <p id="cambiado"></p>
+    </div>
+
+    <script>
+        $("#focusBlur").focus(function () {
+            $("#focusBlur").css("background-color", "yellow")
+        })
+        $("#focusBlur").blur(function () {
+            $("#focusBlur").css("background-color", "green")
+        })
+        $("#focusBlur").focus(function () {
+            $("#focusBlur").css("background-color", "yellow")
+        })
+        $("#change").change(function(){
+            $("#cambiado").text("seleccionado: " + $(this).val())
+        })
+        $("#form").submit(function(){
+            $("#cambiado").text("enviado:")
+        })
+    </script>
+
+    <div>
+        <div id="scroll">Cambia con scroll</div>
+        <div id="resize">cambia con resize</div>
+    </div>
+
+    <script>
+        $(window).scroll(function() {
+            $("#scroll").css("background-color","black")
+            $("#scroll").css("color","white")
+        })
+        $(window).resize(function(){
+            $("#resize").css({"height":"25px","width":"1000px","border":"1em blue solid"})
+        })
+    </script>
+
+    <div>
+        <div id="intro" style="border: 1em red solid; height: 250px; width: 250px;"></div>
+        <div id="res"></div>
+    </div>
+    
+
+    <script>
+        $("#intro").click(function(event){
+            $("#res").text("click")
+            $(this).text(event.offsetX)
+            $(this).text(event.offsetY)
+        })
+        $("#intro").dblclick(function(){
+            $("#res").text("doble click")
+            $(this).css("background-color", "blue")
+        })
+        $("#intro").hover(function(){
+            $("#res").text("hover")
+        })
+        $("#intro").mousedown(function(){
+            $("#res").text("mousedown")
+        })
+        $("#intro").mouseup(function(){
+            $("#res").text("mouseup")
+        })
+        $("#intro").mouseleave(function(){
+            $("#res").text("mouseleave")
+            $(this).css("background-color", "white")
+        })
+        $("#intro").mouseenter(function(){
+            $("#res").text("mouseenter")
+        })  
+    </script>
+
+    <div>
+        <ul id="menu">
+            <li>Inicio
+                <ul class="sub">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </li>
+            <li> Manolo
+                <ul class="sub">
+                    <li>hola</li>
+                    <li>asdf</li>
+                    <li>eee</li>
+                </ul>
+            </li>
+            <li> Pepito
+                <ul class="sub">
+                    <li>aa</li>
+                    <li>bbb</li>
+                    <li>cccc</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".sub > li").hide()
+        })
+        // $("#menu > li").mouseenter(function(){
+        //     $(this).children(".sub").children("li").slideDown(1000)
+        // })
+        // $("#menu > li").mouseleave(function(){
+        //     $(this).children(".sub").children("li").slideUp(1000)
+        // })
+        // $("#menu > li").mouseenter(function(){
+        //     $(this).children(".sub").children("li").show()
+        // })
+        // $("#menu > li").mouseleave(function(){
+        //     $(this).children(".sub").children("li").hide()
+        // })
+        $("#menu > li").click(function(){
+            $(this).children(".sub").children("li").toggle()
+        })
+    </script>
+
+    <div>
+        <div id="holita" style="border: 1em red solid; width: 1000px; height: 150px;"></div>
+        <button id="fadeIn">Fadein</button>
+        <button id="fadeOut">Fadeout</button>
+        <button id="fadeToggle">FadeToggle</button>
+        <button id="toggle">toggle</button>
+        <button id="slideToggle">slideToggle</button>
+    </div>
+
+    <script>
+        $("#fadeIn").click(function(){
+            $("#holita").fadeIn(1000)
+        })
+        $("#fadeOut").click(function(){
+            $("#holita").fadeOut(1000)
+        })
+        $("#fadeToggle").click(function(){
+            $("#holita").fadeToggle(1000)
+        })
+        $("#toggle").click(function(){
+            $("#holita").toggle(1000)
+        })
+        $("#slideToggle").click(function(){
+            $("#holita").slideToggle(1000)
+        })
+    </script>
+
+    <div>
+        <div data-numero="1" id="holaza" style="border: 1em red solid; width: 1000px; height: 150px;">texto1</div>
+        <button id="cccambio">cambiacion</button>
+    </div>
+
+    <script>
+        function cambio(contenedor) {
+            let numero = contenedor.attr("data-numero")
+            if (numero==1) {
+                contenedor.css("background-color","green")
+                contenedor.text("fondito verde")
+                contenedor.attr("data-numero","0")
+            } else{
+                contenedor.css("background-color","white")
+                contenedor.text("fondito blanco")
+                contenedor.attr("data-numero","1")
+            }
+        }
+        $("#cccambio").click(function(){
+            let contenedor = $("#holaza")
+            $("#holaza").fadeToggle(1000,cambio(contenedor))
+        })
+    </script>
+
+    <div>
+        <button id="casa">Cambiar elemento</button>
+        <button id="casa2">ir al final</button>
+        <div id="cajon" style="border: 1em red solid; width: 1000px; height: 150px;">aqui hay cosas</div>
+        <div style="height: 10000px;"></div>
+        <button id="casa3">Volver arriba</button>
+    </div>
+
+    <script>
+        //<div id="cajon" style="border: 1em red solid; width: 1000px; height: 150px;">aqui hay cosas</div>
+        $("#casa").click(function(){
+            $("#cajon").replaceWith(`<div id="cajon" style="border: 1em green solid; width: 1000px; height: 150px;">ahora son otras cosas</div>`)
+        })
+        $("#casa2").click(function(){
+            $("html, body").animate({scrollTop: $(document).height()},1000)
+        })
+        $("#casa3").click(function(){
+            $("html, body").animate({scrollTop: $("#casa").offset().top},1000)
+        })
+    </script>
 
 </body>
 

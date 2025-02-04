@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <div>
+        <div id="div1" data-inf="0" style="position: relative; border: 1em red solid; height: 300px; width: 300px;">esto
+            vambia</div>
+        <button id="boton1">Activar animacion</button>
+    </div>
+
+    <script>
+        $("#div1").hover(function () {
+            if ($("#div1").attr("data-inf") == 0) {
+                $("#div1").attr("data-inf", 1)
+                $("#div1").animate({
+                    left: "250px",
+                    top: "250px",
+                    width: "50px",
+                    height: "500px"
+                }, 200)
+            } else {
+                $("#div1").attr("data-inf", 0)
+                $("#div1").animate({
+                    left: "0px",
+                    top: "0px",
+                    width: "300px",
+                    height: "300px"
+                }, 200)
+            }
+        })
+    </script>
+    <div>
+        <ul>
+            <li data-inf="0">Section 1</li>
+            <li data-inf="1">Section 2</li>
+            <li data-inf="2">Section 3</li>
+        </ul>
+        <div class="mover" style="border: 0.5em black dashed; height: 2000px;" id="1">Section1</div>
+        <div class="mover" style="border: 0.5em black dashed; height: 2000px;" id="2">Section2</div>
+        <div class="mover" style="border: 0.5em black dashed; height: 2000px;" id="3">Section3</div>
+    </div>
+
+    <script>
+        //auto
+        //crear nodos div en torno al numero de LI para asegurar outOfIndex
+        let li = $("li")
+        let divs = $(".mover")
+        li.each(function (index, element) {
+            $(element).on("click", function () {
+                //data-inf coincide con index, se pueden usar ambos
+                let target = $(this).attr("data-inf")
+                $("html, body").animate({ scrollTop: $(divs[target]).offset().top }, 1000)
+                $(divs[target]).text($(divs[target]).offset().top)
+                //parriba lokete
+                $("html, body").animate({ scrollTop: 0 }, 1000)
+            })
+        })
+    </script>
+
+    <div>
+        <div id="4" style="background-color: blue; height: 100px; width: 100px; position: relative;"></div>
+        <div id="5" style="background-color: red; height: 100px; width: 100px; position: relative;"></div>
+    </div>
+
+    <script>
+        $("#4").on("click", function () {
+            $("#4").animate({
+                left: "100px",
+            }, 2000)
+            $("#4").animate({
+                top: "100px",
+            }, 200)
+        })
+        $("#5").on("click", function () {
+            $("#5").animate({
+                top: "100px",
+                left: "100px",
+                height: "500px",
+                width: "500px",
+            }, 2000)
+        })
+    </script>
+
+    <div>
+        <div id="6" style="background-color: grey; border: dashed black 0.1em; height: 500px;">Cajita</div>
+        <button id="aclarar">Aclarar</button>
+        <button id="toggle">Toggle</button>
+        <button id="animar">Animar</button>
+    </div>
+
+    <script>
+        $("#aclarar").on("click", function () {
+            let div = $("#6")
+            if (div.css("opacity")==1) {
+                div.slide(200)
+                div.animate({
+                opacity: "0.2",
+            }, 500)
+            div.css("margin-top","0px")
+            } else {
+                div.animate({
+                opacity: "1",
+            }, 500)
+            }
+
+            
+        })
+        
+    </script>
+
+</body>
+
+</html>

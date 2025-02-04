@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-ui-1.14.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.14.1/jquery-ui.min.css">
+</head>
+
+<body>
+    <h1>Ejemplo basico jqueryUI</h1>
+    <div>
+        <div id="slider"></div>
+    </div>
+    <div id="target"></div>
+    <script>
+        var target = $("#target")
+        $("#slider").slider({
+            create: function () {
+                target.text($(this).slider("value"));
+            },
+            slide: function (event, ui) {
+                target.text(ui.value);
+            }
+        });
+    </script>
+    <p>Date: <input type="text" id="datepicker" size="30"></p>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+            $("#datepicker").on("change", function () {
+                $("#datepicker").datepicker("option", "showAnim", "slideDown");
+            });
+        });
+    </script>
+    <div>
+        <div id="accordion">
+            <h3>Section 1</h3>
+            <div>
+                <ul>
+                    <li>List item one</li>
+                    <li>List item two</li>
+                    <li>List item three</li>
+                </ul>
+            </div>
+            <h3>Section 2</h3>
+            <div>
+                <ul>
+                    <li>List item one</li>
+                    <li>List item two</li>
+                    <li>List item three</li>
+                </ul>
+            </div>
+            <h3>Section 3</h3>
+            <div>
+                <ul>
+                    <li>List item one</li>
+                    <li>List item two</li>
+                    <li>List item three</li>
+                </ul>
+            </div>
+            <h3>Section 4</h3>
+            <div>
+                <ul>
+                    <li>List item one</li>
+                    <li>List item two</li>
+                    <li>List item three</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $("#accordion").accordion({
+                collapsible: true
+            });
+        });
+    </script>
+    <div>
+        <fieldset>
+            <legend>Rental Car</legend>
+            <div class="controlgroup-vertical">
+                <select>
+                    <option>Compact car</option>
+                    <option>Midsize car</option>
+                    <option>Full size car</option>
+                    <option>SUV</option>
+                    <option>Luxury</option>
+                    <option>Truck</option>
+                    <option>Van</option>
+                </select>
+                <label for="transmission-standard-v">Standard</label>
+                <input type="radio" name="transmission-v" id="transmission-standard-v">
+                <label for="transmission-automatic-v">Automatic</label>
+                <input type="radio" name="transmission-v" id="transmission-automatic-v">
+                <label for="insurance-v">Insurance</label>
+                <input type="checkbox" name="insurance" id="insurance-v">
+                <label for="vertical-spinner" class="ui-controlgroup-label"># of cars</label>
+                <input id="vertical-spinner" class="ui-spinner-input">
+                <button id="book">Book Now!</button>
+            </div>
+        </fieldset>
+        <div id="dialog" title="Basic dialog">
+            <p>Por favor inroduce todos los campos.</p>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $(".controlgroup-vertical").controlgroup({
+                "direction": "vertical"
+            });
+            $("#dialog").dialog({
+                autoOpen: false,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "explode",
+                    duration: 1000
+                }
+            });
+            $("#book").on("click", function () {
+                //TODO controlar que todo este puesto
+                //else enseñar dialogo
+                $("#dialog").dialog("open");
+            });
+        });
+    </script>
+    <div>
+        <div id="draggable" class="ui-widget ui-widget-content">
+            <p>Drag me to trigger the chain of events.</p>
+
+            <ul class="ui-helper-reset">
+                <li id="event-start" class="ui-state-default ui-corner-all"><span
+                        class="ui-icon ui-icon-play"></span>"start" invoked <span class="count">0</span>x</li>
+                <li id="event-drag" class="ui-state-default ui-corner-all"><span
+                        class="ui-icon ui-icon-arrow-4"></span>"drag" invoked <span class="count">0</span>x</li>
+                <li id="event-stop" class="ui-state-default ui-corner-all"><span
+                        class="ui-icon ui-icon-stop"></span>"stop"
+                    invoked <span class="count">0</span>x</li>
+            </ul>
+        </div>
+        <div id="soltar" style="background-color: green; height: 500px; width: 500px;"></div>
+    </div>
+
+    <script>
+        $(function () {
+            var $start_counter = $("#event-start"),
+                $drag_counter = $("#event-drag"),
+                $stop_counter = $("#event-stop"),
+                counts = [0, 0, 0];
+
+            $("#draggable").draggable({
+                start: function () {
+                    counts[0]++;
+                    updateCounterStatus($start_counter, counts[0]);
+                },
+                drag: function () {
+                    counts[1]++;
+                    updateCounterStatus($drag_counter, counts[1]);
+                },
+                stop: function () {
+                    counts[2]++;
+                    updateCounterStatus($stop_counter, counts[2]);
+                    $("#soltar").css("background-color", "red")
+                }
+            });
+
+            function updateCounterStatus($event_counter, new_count) {
+                // first update the status visually...
+                if (!$event_counter.hasClass("ui-state-hover")) {
+                    $event_counter.addClass("ui-state-hover")
+                        .siblings().removeClass("ui-state-hover");
+                }
+                // ...then update the numbers
+                $("span.count", $event_counter).text(new_count);
+            }
+        });
+    </script>
+
+    <div style="height: 500px;">
+        <div id="resizable" class="ui-widget-content" style="background-color: blueviolet;">
+            <h3 class="ui-widget-header">Resizable</h3>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $("#resizable").resizable();
+        });
+    </script>
+
+    <div>
+        <ul id="sortable">
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+        </ul>
+    </div>
+
+    <script>
+        $(function () {
+            $("#sortable").sortable();
+        });
+    </script>
+
+    <div>
+        <ol id="selectable">
+            <li class="ui-widget-content">Item 1</li>
+            <li class="ui-widget-content">Item 2</li>
+            <li class="ui-widget-content">Item 3</li>
+            <li class="ui-widget-content">Item 4</li>
+            <li class="ui-widget-content">Item 5</li>
+            <li class="ui-widget-content">Item 6</li>
+            <li class="ui-widget-content">Item 7</li>
+          </ol>
+    </div>
+    <style>
+        #feedback { font-size: 1.4em; }
+        #selectable .ui-selecting { background: #FECA40; }
+        #selectable .ui-selected { background: #F39814; color: white; }
+        #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+        #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+        </style>
+
+    <script>
+        $( function() {
+          $( "#selectable" ).selectable();
+        } );
+        </script>
+
+</body>
+
+</html>
