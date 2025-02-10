@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sporty - Pagina Principal</title>
+    <link rel="icon" href="../imagenes/favIcon.png" type="image/png">
+    <link rel="stylesheet" href="../css/base.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="../js/home.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <!--
+        Tienda de articulos deportivos
+
+        MINIMO INCLUIR:
+        menu superior con 4 secciones
+        menu lateral con categorias
+        seccion 4 categorias
+        seccion 4 productos destacados
+        icono carrito
+        pie de pagina
+        repetar licencia imagenes
+
+        USAR JQUERY
+        AQUI NO USAR JQUERYUI
+
+        AÑADIR FORMULARIO "RECIBIR OFERTAS"
+        >=3CAMPOS: NOMBRE APELLIDOS CORREO PAIS(>=3) TELEFONO
+        PREFIJO SE RELLENA CON EL PAIS SELECCIONADO
+        BOTON DIRECTO AL FORMULARIO, ENSEÑAR MENSAJE PREVIAMENTE OCULTO
+        AÑADIR LOGO ACREDITATIVO NIVEL ACCESIBILIDAD
+    -->
+
+    <div class="mainContainer">
+        <div class="header">
+            <div class="logo"><img src="../imagenes/logo.PNG" alt=""></div>
+            <nav class="nav">
+                <a href="#">Página Principal</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#formulario" id="ofertas">OFERTAS</a>
+                <a href="#">Carrito<span class="material-icons">shopping_cart</span></a>
+                
+            </nav>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar..." />
+                <button>Search</button>
+            </div>
+        </div>
+        <div class="zonaCentral">
+            <div class="lateral">
+                <div>Categorias</div>
+                <div>Ciclismo</div>
+                <div>Futbol</div>
+                <div>Golf</div>
+                <div>Natacion</div>
+            </div>
+            <div class="division categoria">
+                <div class="elemento">
+                    <img src="../imagenes/ciclismoM.jpg" alt="ciclismo" srcset="" />
+
+                    <div>Ciclismo</div>
+                </div>
+                <div class="elemento">
+                    <img src="../imagenes/futbol.jpg" alt="ciclismo" srcset="" />
+
+                    <div>Futbol</div>
+                </div>
+                <div class="elemento">
+                    <img src="../imagenes/golf.jpg" alt="ciclismo" srcset="" />
+
+                    <div>Golf</div>
+                </div>
+                <div class="elemento">
+                    <img src="../imagenes/natacion.jpg" alt="ciclismo" srcset="" />
+
+                    <div>Natacion</div>
+                </div>
+            </div>
+            <div class="division producto">
+                <div class="elemento">
+                    <img src="../imagenes/bici.jpg" alt="ciclismo" srcset="" />
+
+                    <div>Bicicleta 199.99€<br /><span>240.99€</span></div>
+                </div>
+                <div class="elemento">
+                    <img src="../imagenes/balon.jpg" alt="ciclismo" srcset="" />
+
+                    <div>Balon UEFA 49.99€<br /><span>67.99€</span></div>
+                </div>
+                <div class="elemento">
+                    <img src="../imagenes/bolas.jpg" alt="ciclismo" srcset="" />
+
+                    <div>Bolas Golf 2.99€/ud<br /><span>5.99€/ud</span></div>
+                </div>
+                <div class="elemento">
+                    <img src="../imagenes/hinchable.jpg" alt="hinchable" srcset="" />
+
+                    <div>Hinchable 20.99€<br /><span>24.99€</span></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <footer class="footer">
+        <div class="footer-resources">
+            <h3>Empresa</h3>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Trabajos</a>
+            <a href="#">Contacto</a>
+        </div>
+        <div class="footer-help">
+            <h3>Ayuda</h3>
+            <a href="#">Soporte</a>
+            <a href="#">Preguntas Frecuentes</a>
+        </div>
+        <div class="footer-company">
+            <h3>Recursos</h3>
+            <a href="#">Blog</a>
+            <a href="#">Documentacion</a>
+        </div>
+        <div id="formulario">
+            <h3>Recibe ofertas</h3>
+            <form action="submit_form.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="pais">País:</label>
+                <input type="text" id="pais" name="pais" required><br><br>
+                
+                <label for="prefijo">Prefijo:</label>
+                <input type="text" id="prefijo" name="prefijo" required><br><br>
+                
+                <label for="telefono">Telefono:</label>
+                <input type="text" id="telefono" name="telefono" required><br><br>
+                
+                <input type="submit" value="Enviar">
+            </form>
+            <!-- TODO -->
+            <h3>Mensaje Oculto previamente</h3>
+        </div>
+        <div class="footer-logo">
+            <div class="logo"><img src="../imagenes/logo.PNG" alt=""></div>
+        </div>
+        
+    </footer>
+    <div class="footer-copyright">
+        <p>&copy; 2024 Sporty SL. Todos los derechos reservados. Imagenes &copy;Pexel </p>
+    </div>
+</body>
+
+</html>

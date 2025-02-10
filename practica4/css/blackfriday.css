@@ -1,0 +1,57 @@
+body {
+  background-color: #0E1428;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
+
+.navbar-nav .nav-link {
+  color: #FFFFFF;
+  transition: color 0.3s ease; }
+  .navbar-nav .nav-link:hover {
+    color: #F0A202; }
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0; }
+  .navbar-brand img.navbar-logo {
+    height: 100px;
+    margin-right: 10px; }
+
+.alert-warning {
+  background-color: #D95D39;
+  color: #0E1428;
+  font-weight: 700; }
+  .alert-warning strong {
+    color: inherit;
+    font-weight: 900; }
+  .alert-warning .btn-close {
+    filter: invert(1); }
+
+.carousel-caption {
+  text-align: center;
+  font-weight: 900;
+  font-size: 120%; }
+  .carousel-caption h5, .carousel-caption p {
+    font-size: 100%;
+    font-weight: 600;
+    background-color: #0E1428;
+    color: #FFFFFF;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto; }
+    .carousel-caption h5:hover, .carousel-caption p:hover {
+      color: #F0A202; }
+
+.btn-primary {
+  background-color: #0E1428;
+  border-color: #FFFFFF; }
+  .btn-primary:hover {
+    background-color: #F0A202;
+    border-color: #0E1428;
+    color: #0E1428; }
+
+footer p:hover, footer a:hover {
+  color: #F0A202 !important; }
+
+/*# sourceMappingURL=blackfriday.css.map */
