@@ -10,6 +10,11 @@ body {
   max-height: 100%;
   max-width: 100%; }
 
+#nivelA{
+  max-width: 200px;
+  max-height: 50px;
+}
+
 .header {
   display: grid;
   grid-template-columns: 20vw 4fr 1fr;
@@ -146,8 +151,8 @@ body {
         max-width: 80%;
         border-radius: 20%;
         transition: transform 0.2s ease; }
-        .zonaCentral .division .elemento img:hover {
-          transform: scale(1.1); }
+        /* .zonaCentral .division .elemento img:hover {
+          transform: scale(1.1); } */
 
 .footer {
   display: grid;

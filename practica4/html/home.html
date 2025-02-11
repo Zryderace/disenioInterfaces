@@ -37,7 +37,7 @@
 
     <div class="mainContainer">
         <div class="header">
-            <div class="logo"><img src="../imagenes/logo.PNG" alt=""></div>
+            <div class="logo"><img alt="Logo Sporty" src="../imagenes/logo.PNG" alt=""></div>
             <nav class="nav">
                 <a href="#">Página Principal</a>
                 <a href="#">Sobre Nosotros</a>
@@ -60,44 +60,44 @@
             </div>
             <div class="division categoria">
                 <div class="elemento">
-                    <img src="../imagenes/ciclismoM.jpg" alt="ciclismo" srcset="" />
+                    <img alt="Imagen Apartado Ciclismo" src="../imagenes/ciclismoM.jpg" alt="ciclismo" srcset="" />
 
                     <div>Ciclismo</div>
                 </div>
                 <div class="elemento">
-                    <img src="../imagenes/futbol.jpg" alt="ciclismo" srcset="" />
+                    <img alt="Imagen Apartado Futbol" src="../imagenes/futbol.jpg" alt="ciclismo" srcset="" />
 
                     <div>Futbol</div>
                 </div>
                 <div class="elemento">
-                    <img src="../imagenes/golf.jpg" alt="ciclismo" srcset="" />
+                    <img alt="Imagen Apartado Golf" src="../imagenes/golf.jpg" alt="ciclismo" srcset="" />
 
                     <div>Golf</div>
                 </div>
                 <div class="elemento">
-                    <img src="../imagenes/natacion.jpg" alt="ciclismo" srcset="" />
+                    <img alt="Imagen Apartado Natacion" src="../imagenes/natacion.jpg" alt="ciclismo" srcset="" />
 
                     <div>Natacion</div>
                 </div>
             </div>
             <div class="division producto">
                 <div class="elemento">
-                    <img src="../imagenes/bici.jpg" alt="ciclismo" srcset="" />
+                    <img alt="Imagen Bici Montaña" src="../imagenes/bici.jpg" alt="ciclismo" srcset="" />
 
                     <div>Bicicleta 199.99€<br /><span>240.99€</span></div>
                 </div>
                 <div class="elemento">
-                    <img src="../imagenes/balon.jpg" alt="ciclismo" srcset="" />
+                    <img alt="Imagen Balon Futbol" src="../imagenes/balon.jpg" alt="ciclismo" srcset="" />
 
                     <div>Balon UEFA 49.99€<br /><span>67.99€</span></div>
                 </div>
                 <div class="elemento">
-                    <img src="../imagenes/bolas.jpg" alt="ciclismo" srcset="" />
+                    <img alt="Imagen Bolas Golf" src="../imagenes/bolas.jpg" alt="ciclismo" srcset="" />
 
                     <div>Bolas Golf 2.99€/ud<br /><span>5.99€/ud</span></div>
                 </div>
                 <div class="elemento">
-                    <img src="../imagenes/hinchable.jpg" alt="hinchable" srcset="" />
+                    <img alt="Imagen Flotador Donut" src="../imagenes/hinchable.jpg" alt="hinchable" srcset="" />
 
                     <div>Hinchable 20.99€<br /><span>24.99€</span></div>
                 </div>
@@ -124,7 +124,8 @@
         </div>
         <div id="formulario">
             <h3>Recibe ofertas</h3>
-            <form action="submit_form.php" method="post">
+            <h3 id="oculto" style="display: none;">Mensaje Oculto previamente, buenas tardes</h3>
+            <form action="" method="post">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required><br><br>
                 
@@ -133,28 +134,33 @@
                 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required><br><br>
+
+                <label for="prefijo">Prefijo:</label>
+                <input type="text" id="prefijo" name="prefijo" disabled required>
                 
                 <label for="pais">País:</label>
-                <input type="text" id="pais" name="pais" required><br><br>
-                
-                <label for="prefijo">Prefijo:</label>
-                <input type="text" id="prefijo" name="prefijo" required><br><br>
+                <select id="pais" name="pais" required>
+                    <option value="" selected disabled>Selecciona pais</option>
+                    <option value="espana">España</option>
+                    <option value="canada">Canada</option>
+                    <option value="mexico">Mexico</option>
+                    <option value="eeuu">EEUU</option>
+                </select><br><br>
                 
                 <label for="telefono">Telefono:</label>
                 <input type="text" id="telefono" name="telefono" required><br><br>
                 
-                <input type="submit" value="Enviar">
             </form>
-            <!-- TODO -->
-            <h3>Mensaje Oculto previamente</h3>
+            <input type="submit" value="Enviar">
         </div>
         <div class="footer-logo">
-            <div class="logo"><img src="../imagenes/logo.PNG" alt=""></div>
+            <div class="logo"><img alt="Logo Sporty" src="../imagenes/logo.PNG" alt=""></div>
         </div>
         
     </footer>
     <div class="footer-copyright">
         <p>&copy; 2024 Sporty SL. Todos los derechos reservados. Imagenes &copy;Pexel </p>
+        <p>Nivel de accesibilidad: A</p><img id="nivelA" src="../imagenes/nivelA.png" alt="">
     </div>
 </body>
 

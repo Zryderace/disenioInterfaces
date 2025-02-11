@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* es tan poco contenido de css que he decidido hacerlo dentro del mismo archivo */
+        .cumple{
+            background-color: greenyellow;
+        }
+        .noCumple{
+            background-color: red;
+        }
+        .noProcede{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Home.html WCAG2.2</h1>
+    <table border="1">
+        <tr>
+            <th>Principio/Guia</th>
+            <th>Nivel</th>
+            <th>Cumple</th>
+            <th>No Cumple</th>
+            <th>No Procede</th>
+        </tr>
+        <tr>
+            <td>Texto Alternativo</td>
+            <td>A</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Audio y Video solo (pregrabado)</td>
+            <td>A</td>
+            <td></td>
+            <td></td>
+            <td class="noProcede"></td>
+        </tr>
+        <tr>
+            <td>Descripcion audio o alternativa (pregrabado)</td>
+            <td>A</td>
+            <td></td>
+            <td></td>
+            <td class="noProcede"></td>
+        </tr>
+        <tr>
+            <td>Subtitulos (directo)</td>
+            <td>AA</td>
+            <td></td>
+            <td></td>
+            <td class="noProcede"></td>
+        </tr>
+        <tr>
+            <td>Descripcion Audio (pregrabado)</td>
+            <td>AA</td>
+            <td></td>
+            <td></td>
+            <td class="noProcede"></td>
+        </tr>
+        <tr>
+            <td>Lenguaje de signos (pregrabado)</td>
+            <td>AAA</td>
+            <td></td>
+            <td></td>
+            <td class="noProcede"></td>
+        </tr>
+        <tr>
+            <td>Descripcion audio extendida (pregrabado)</td>
+            <td>AAA</td>
+            <td></td>
+            <td></td>
+            <td class="noProcede"></td>
+        </tr>
+        <tr>
+            <td>Alternativa audiovisual (pregrabado)</td>
+            <td>AAA</td>
+            <td></td>
+            <td></td>
+            <td class="noProcede"></td>
+        </tr>
+        <tr>
+            <td>Audio solo (directo)</td>
+            <td>AAA</td>
+            <td></td>
+            <td></td>
+            <td class="noProcede"></td>
+        </tr>
+        <tr>
+            <td>Informacion y relaciones</td>
+            <td>A</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Orden Logico</td>
+            <td>A</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Caracteristicas Sensoriales</td>
+            <td>A</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Orientacion</td>
+            <td>AA</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Identificacion de inputs</td>
+            <td>AA</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Uso de color</td>
+            <td>A</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Audio control</td>
+            <td>A</td>
+            <td></td>
+            <td></td>
+            <td class="noProcede"></td>
+        </tr>
+        <tr>
+            <td>Contraste minimo</td>
+            <td>AA</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Texto ajustable tamaño</td>
+            <td>AA</td>
+            <td></td>
+            <td class="noCumple"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Contraste mejorado</td>
+            <td>AAA</td>
+            <td></td>
+            <td class="noCumple"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Bajo o no audio de fondo</td>
+            <td>AAA</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Representacion visual</td>
+            <td>AAA</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>No contraste texto</td>
+            <td>AA</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Espaciado texto</td>
+            <td>AA</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Contenido hover o focus</td>
+            <td>AA</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Teclado</td>
+            <td>A</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Teclado no atrapado</td>
+            <td>A</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Ajuste Tiempo</td>
+            <td>A</td>
+            <td></td>
+            <td></td>
+            <td class="noProcede"></td>
+        </tr>
+        <tr>
+            <td>No tiempo limite</td>
+            <td>AAA</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Timeouts</td>
+            <td>AAA</td>
+            <td></td>
+            <td></td>
+            <td class="noProcede"></td>
+        </tr>
+        <tr>
+            <td>3 flashes o menos</td>
+            <td>AAA</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Pagina titulada</td>
+            <td>A</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Orden Focus</td>
+            <td>A</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Titulos</td>
+            <td>AA</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Proposito link</td>
+            <td>AAA</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Apariencia de foco</td>
+            <td>AAA</td>
+            <td></td>
+            <td class="noCumple"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Idioma</td>
+            <td>A</td>
+            <td></td>
+            <td class="noCumple"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Palabras inusuales</td>
+            <td>AAA</td>
+            <td></td>
+            <td></td>
+            <td class="noProcede"></td>
+        </tr>
+        <tr>
+            <td>Nivel lectura</td>
+            <td>AAA</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Identificacion Errores</td>
+            <td>A</td>
+            <td></td>
+            <td class="noCumple"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Ayuda</td>
+            <td>AAA</td>
+            <td></td>
+            <td class="noCumple"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Nombre, roles, valores</td>
+            <td>A</td>
+            <td class="cumple"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Mensajes de estado</td>
+            <td>AA</td>
+            <td></td>
+            <td></td>
+            <td class="noProcede"></td>
+        </tr>
+        <h1>Nivel: A</h1>
+    </table>
+</body>
+</html>
