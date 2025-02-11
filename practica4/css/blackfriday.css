@@ -54,4 +54,33 @@ body {
 footer p:hover, footer a:hover {
   color: #F0A202 !important; }
 
-/*# sourceMappingURL=blackfriday.css.map */
+  .navbar {
+    background-color: #343a40;
+    padding: 10px;
+    color: white;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #ccc;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+.offcanvas {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+.offcanvas-header, .offcanvas-body {
+    padding: 15px;
+}
+.btn-close {
+    cursor: pointer;
+}
